@@ -1,9 +1,8 @@
 const express = require("express")
-const { connection } = require("./db")
-const {UserModel} = require("./model/user.model")
+const { connection } = require("./configs/db")
+const { userRouter } = require("./route/user.route")
 const cors=require("cors")
-
-
+const { foodRouter } = require("./route/food.route")
 
 
 const app = express()
@@ -12,31 +11,12 @@ app.use(express.json())
 app.use(cors())
 
 
+// app.get("/", (req, res) => {
+//     res.send("Home Page");
+// });
 
-
-app.get("/", async(req, res) => {
-    let query = req.query
-    try {
-        const users = await UserModel.find(query)
-        res.send(users)
-    } catch (e) {
-        res.send({ "msg": "user registration failed", "error": e.message })
-    }
-})
-
-
-app.post("/createusers", async (req, res) => {
-    // const data=req.body
-    try {
-        const user = new UserModel(req.body)
-        await user.save()
-        res.send({ "msg": "user has been added" })
-    }
-    catch (err) {
-        res.send({ "msg": "cannot added", "error": err.messaage })
-    }
-})
-
+app.use("/users", userRouter)
+app.use("/foods",foodRouter)
 
 
 

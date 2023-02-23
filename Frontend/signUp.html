@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #box1 {
+            /* border: 1px  solid rgb(12, 196, 46); */
+            height: auto;
+            width: 70%;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        #container {
+            /* border: 1px solid rgb(1, 23, 227); */
+            width: 28%;
+            height: 580px;
+            margin: auto;
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: auto;
+            display: block;
+            color: #494949;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 7%;
+            margin-top: 10px;
+        }
+
+        #fn {
+            border: none;
+            text-align: left;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #202124;
+            outline: none;
+            font-family: 'National 2 Regular';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            line-height: 24px;
+            color: #202124;
+            padding-bottom: 0.7%;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #head {
+            font-size: 20px;
+            font-weight: lighter;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 20px;
+            color: #202124;
+
+        }
+
+        #submit {
+            width: 90%;
+            background: #e9e9e9;
+            color: #202124;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 30px;
+            align-items: center;
+            text-align: center;
+            outline: none;
+            border-radius: 66px;
+            border: 1px solid #202124;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px 45px;
+            cursor: pointer;
+            margin-top: 25px;
+            margin-bottom: 20PX;
+        }
+
+        #stripes {
+            width: 40px;
+            height: 3.6rem;
+            color: #e4002b;
+            fill: currentColor;
+            margin: 0 10px;
+        }
+
+        #ln {
+            border: none;
+            text-align: left;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #202124;
+            outline: none;
+            font-family: 'National 2 Regular';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            line-height: 24px;
+            color: #202124;
+            padding-bottom: 0.7%;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #email  {
+            border: none;
+            text-align: left;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #202124;
+            outline: none;
+            font-family: 'National 2 Regular';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            line-height: 24px;
+            color: #202124;
+            padding-bottom: 0.7%;
+            position: relative;
+            margin-top: 20px;
+        }
+        #name  {
+            border: none;
+            text-align: left;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #202124;
+            outline: none;
+            font-family: 'National 2 Regular';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            line-height: 24px;
+            color: #202124;
+            padding-bottom: 0.7%;
+            position: relative;
+            margin-top: 20px;
+        }
+        #phone  {
+            border: none;
+            text-align: left;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #202124;
+            outline: none;
+            font-family: 'National 2 Regular';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            line-height: 24px;
+            color: #202124;
+            padding-bottom: 0.7%;
+            position: relative;
+            margin-top: 20px;
+        }
+        #password  {
+            border: none;
+            text-align: left;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #202124;
+            outline: none;
+            font-family: 'National 2 Regular';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            line-height: 24px;
+            color: #202124;
+            padding-bottom: 0.7%;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #number1 {
+            border: none;
+            text-align: left;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #202124;
+            outline: none;
+            font-family: 'National 2 Regular';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            line-height: 24px;
+            color: #202124;
+            padding-bottom: 0.7%;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #number2 {
+            border: none;
+            text-align: left;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #202124;
+            outline: none;
+            font-family: 'National 2 Regular';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            line-height: 24px;
+            color: #202124;
+            padding-bottom: 0.7%;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #termcondition1 {
+            margin-top: 20px;
+
+        }
+
+        #term1 {
+            font-size: 13px;
+            margin-top: -15px;
+        }
+
+
+        #term2 {
+            font-size: 13px;
+            display: block;
+            margin-top: -18px;
+            margin-left: 14px;
+        }
+
+        #termcondition2 {
+            margin-top: 20px;
+            display: block;
+
+        }
+
+        #para2 {
+            margin-right: 60px;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        #header {
+            height: 70px;
+            width: 100%;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        }
+
+        #header h1 {
+            font-family: cursive;
+            vertical-align: baseline;
+            font-size: 25px;
+            color: #202124;
+            font-weight: bold;
+
+        }
+
+
+
+
+        @media all and (min-width: 100px) and (max-width:900px) {
+
+            #container {
+                width: auto;
+                height: auto;
+                margin: auto;
+                margin-top: 40px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                margin-bottom: 40px;
+            }
+
+
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Kentucky Fried Chicken</h>
+    </div>
+    <div id="container">
+
+
+        <figure id="stripes">
+            <svg viewBox="0 0 42 20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path class="strip-1" d="M0 0h8v20H0z"></path>
+                <path class="strip-2" d="M16 0h8v20h-8z"></path>
+                <path class="strip-3" d="M32 0h8v20h-8z"></path>
+            </svg>
+        </figure>
+        <div id="box1">
+
+            <h2 id="head">CREATE AN ACCOUNT</h2>
+            <br>
+            <input type="text" id="name" placeholder="Enter name here">
+            <br>
+            <br>
+            <input type="text" id="email" placeholder="Enter email here">
+            <br>
+            <br>
+            <input type="number" id="phone" placeholder="Enter phone here">
+            <br>
+            <br>
+            <input type="password" id="password" placeholder="Enter password here">
+            <br>
+            <br>
+            <button onclick="onSingup()">Sign Up</button>
+
+ <br> <br>
+            <input type="checkbox" id="termcondition1">
+
+            <label id="term1">By selecting the box, you agree to our <u>Privacy Policy</u> and <u>Terms of
+                    USe</u></label><br>
+
+            <input type="checkbox" id="termcondition2">
+
+            <label id="term2">Sing up for Email updates and Promotions</label>
+
+<br>
+<br>
+
+            <p2 id="para2">Already a member? <a href="Login.html"><u>Log In</u></a></p2>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+
+    const onSingup = () => {
+
+        const payload = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+            phone: document.getElementById("phone").value
+
+        }
+
+        // console.log(payload)
+
+        fetch("http://localhost:4500/users/register", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(payload)
+        }).then(res => res.json())
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+    };
+</script>
+
+</html>
