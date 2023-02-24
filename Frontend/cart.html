@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="kfcMenu">
+        <!-- kfcMenu Page -->
+   
+
+
+
+    </div>
+</body>
+
+</html>
+
+
+
+<script>
+    let productCont = document.getElementById("kfcMenu");
+    let cartLS = JSON.parse(localStorage.getItem("cart-page")) || [];
+    displayProducts(cartLS)
+    console.log(cartLS)
+
+    function displayProducts(productData) {
+        productCont.innerHTML = "";
+
+        productData.forEach(function (elem) {
+
+        let product = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = elem.image;  
+
+
+        let title = document.createElement("h3");
+        title.textContent = elem.title;
+
+
+        let price = document.createElement("p");
+        price.innerText = Number(elem.price);
+
+
+        let calories = document.createElement("p");
+        calories.innerText = Number(elem.calories);
+
+
+        let des = document.createElement("p");
+        des.textContent = elem.des;
+        
+    
+        product.append(img, title, price, calories,des)
+            productCont.append(product)
+
+        })
+
+
+
+    }
+</script>
