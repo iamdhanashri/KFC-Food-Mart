@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const foodSchema=mongoose.Schema({
     image:String,
     title:String,
-    price:String,
+    price:Number,
     calories:String,
     des:String
    

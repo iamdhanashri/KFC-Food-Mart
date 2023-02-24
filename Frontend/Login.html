@@ -346,6 +346,7 @@ fetch("http://localhost:4500/users/login", {
         console.log(res)
         if(res.msg=="Login Succsess"){
             alert("Login SucessFul")
+            window.location.href = "index.html"
         }
         else{
             alert("Login Failed")

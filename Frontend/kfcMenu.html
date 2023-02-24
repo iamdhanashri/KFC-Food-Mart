@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #main_container {
+            width: 100vw;
+            display: flex;
+        }
+
+        .left-menu-section {
+            flex: 1;
+            margin-left: 100px;
+            position: fixed;
+            top: 100px;
+        }
+
+        .strips {
+            display: flex;
+        }
+
+        .strip-lines {
+            width: 5px;
+            height: 25px;
+            background-color: red;
+            padding: 2px;
+            margin: 0px 10px 10px 0px;
+        }
+
+        .outer-ul {
+            color: gray;
+            line-height: 25px;
+            font-size: large;
+        }
+
+        .outer-ul a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .right-menu-section {
+            flex: 3;
+            width: 60%;
+            margin-right: 6.2%;
+            margin-left: 30%;
+            margin-top: 2%;
+        }
+
+        .right-menu-section hr {
+            width: 860px;
+            height: 1px;
+            background-color: black;
+            margin-left: 0px;
+
+        }
+
+        #main_search-bar {
+            width: 200px;
+            height: 30px;
+            margin-top: 80px;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            border: 1px solid #cecece;
+        }
+
+        #main_search-bar div {
+            margin-top: 5px;
+        }
+
+        #main_search-bar input {
+            flex: 0.9;
+            height: 28px;
+            border: none;
+            outline: none;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
+        #c_b {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            margin-right: 85px;
+        }
+
+        @media small {}
+
+        #h_d {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            margin-right: 85px;
+        }
+
+        #n_l {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            margin-right: 85px;
+        }
+
+        #c_b>div {
+            width: 300px;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        #h_d>div {
+            width: 400px;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        #n_l>div {
+            width: 400px;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        /* #brg>div{
+    width: 400px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+} */
+
+        #c_b h3 {
+            padding-left: 6%;
+        }
+
+        #n_l h3 {
+            padding-left: 6%;
+        }
+
+        #h_d h3 {
+            padding-left: 6%;
+        }
+
+        #c_b p {
+            padding-left: 6%;
+        }
+
+        #n_l p {
+            padding-left: 6%;
+        }
+
+        #h_d p {
+            padding-left: 6%;
+        }
+
+        .description {
+            height: 50px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        #c_b img {
+            width: 300px;
+            padding-left: 0%;
+        }
+
+        #h_d img {
+            width: 400px;
+            padding-left: 0%;
+        }
+
+        #n_l img {
+            width: 400px;
+            padding-left: 0%;
+        }
+
+        .right-menu-section button {
+            width: 60%;
+            margin-left: 17%;
+            color: white;
+            background-color: red;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: 1px solid red;
+        }
+
+        .right-menu-section button:hover {
+         
+            border: 1px solid rgba(32, 33, 36, .6509803921568628);
+            background-color: gray
+        }
+
+        #b_b,
+        #b_m,
+        #bgr,
+        #s_h,
+        #snk,
+        #bvg {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            margin-right: 85px;
+
+        }
+
+        #b_b>div {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+
+        }
+
+        #b_m>div {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+        }
+
+        #bgr>div {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+        }
+
+        #s_h>div {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+        }
+
+        #snk>div {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+        }
+
+        #bvg>div {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+        }
+
+        .image_size>div {
+            width: 280px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .image_size img {
+            width: 280px;
+        }
+
+        .image_size h3 {
+            padding-left: 6%;
+        }
+
+        .image_size p {
+            padding-left: 6%;
+        }
+
+        #popup_container {
+            width: 100vw;
+            display: none;
+            position: absolute;
+            background-color: #cecece;
+        }
+
+
+        #popup_left {
+            flex: 1;
+            margin-left: 100px;
+            position: fixed;
+            top: 100px;
+        }
+
+        #popup_right {
+            flex: 3;
+            width: 60%;
+            margin-right: 6.2%;
+            margin-left: 30%;
+        }
+
+        #popup_right hr {
+            width: 860px;
+            height: 1px;
+            background-color: black;
+            margin-left: 0px;
+        }
+
+        #popup_search-bar {
+            width: 200px;
+            height: 30px;
+            margin-top: 80px;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            border: 1px solid #cecece;
+        }
+
+        #popup_search-bar div {
+            margin-top: 5px;
+        }
+
+        #popup_search-bar input {
+            flex: 0.9;
+            height: 28px;
+            border: none;
+            outline: none;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        #searched_food div {
+            width: 280px;
+        }
+
+        #searched_food img {
+            width: 280px;
+        }
+
+        .bottomMost {
+            display: flex;
+            justify-content: center;
+            margin-left: 40%;
+        }
+
+        .copyright {
+            margin-right: 40%;
+            padding-top: 15px;
+        }
+
+        .copyright p {
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-size: 12px;
+            text-align: center;
+            opacity: .9;
+            line-height: 12px;
+            color: #dbdbdb;
+        }
+
+        .socialMedia ul {
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        .socialMedia ul li {
+            margin-right: 10px;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: rgb(32, 33, 36);
+            margin-top: 10%;
+            position: absolute;
+            padding-top: 50px;
+        }
+
+        .stripsDiv {
+            display: flex;
+            margin-left: 240px;
+        }
+
+        .strips {
+            width: 15px;
+            height: 40px;
+            background-color: #E4002B;
+            margin-right: 13px;
+        }
+
+        .kfcLogo {
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+
+        .kfcLogo img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .footerFoot {
+            display: flex;
+            margin-bottom: 5%;
+            
+        }
+
+        .footerFoot ul {
+            margin-right: 50px;
+            margin-top: 50px;
+        }
+
+        .footerFoot ul li {
+            list-style: none;
+            color: #fff;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            cursor: pointer;
+            font-weight: 200;
+           
+        }
+
+        .footerFoot ul li a {
+            list-style: none;
+            color: #fff;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            cursor: pointer;
+            font-weight: 200;
+            text-decoration: none;
+        }
+
+
+        .location {
+            display: flex;
+        }
+
+        .location div a {
+            color: #fff;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-size: 15px;
+        }
+
+        .locationLogo {
+            margin-right: 10px;
+        }
+
+        .locationLogo img {
+            width: 11px;
+            height: 15px;
+        }
+
+        .buttonLogos {
+            display: flex;
+            margin-left: 100px;
+        }
+
+        .buttonLogo1 {
+            margin-right: 30px;
+        }
+
+        .buttonLogo1 img,
+        .buttonLogo2 img {
+            width: 119.7px;
+            height: 40.5px;
+            cursor: pointer;
+        }
+
+
+
+        #navbar {
+            display: flex;
+            /* justify-content: space-between; */
+            padding-left: 4%;
+            padding-right: 4%;
+            background-color: white;
+            /* border: solid 1px black; */
+            width: 100vw;
+
+            height: 100px;
+            z-index: 9999;
+            top: 0;
+            /* bottom: 20; */
+            position: fixed;
+        }
+
+        .navItemLeft {
+            display: flex;
+            padding-top: 6px;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            position: relative;
+        }
+
+        .navItemLeft>a {
+            text-decoration: none;
+            all: unset;
+            cursor: pointer;
+            position: relative;
+            padding-top: 20%;
+            margin-right: 50px;
+            text-decoration: none;
+            font-weight: 550;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-size: 15px;
+            color: #202124;
+        }
+
+        .navItemRight {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            margin-left: 40%;
+            position: relative;
+        }
+
+        a img {
+            width: 76px;
+            height: 23px;
+            margin-top: 38px;
+            margin-right: 44.26px;
+            margin-bottom: 39.48px;
+            margin-left: 50px;
+            cursor: pointer;
+        }
+
+        .accountIcon {
+            display: flex;
+            border-right: 1px solid #cecece;
+            cursor: pointer;
+            width: 30%;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            /* padding-left: 10px; */
+            font-size: 13px
+        }
+
+        .accountIcon a {
+            margin-left: 20px;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        .accountIcon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .bucketIconDiv {
+            display: flex;
+            cursor: pointer;
+            padding-left: 20px;
+        }
+
+        .bucketIconDiv span {
+            padding-top: 20px;
+            padding-left: 5px;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-style: normal;
+            font-size: 13px;
+        }
+
+        .bucketIcon img {
+            width: 51px;
+            height: 51px;
+            margin-top: 8%;
+        }
+
+        #cartIconCount {
+            position: absolute;
+            top: 0;
+            right: 31%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 15px;
+            font-size: 13px;
+            text-align: center;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="navbar">
+            <div>
+
+                <a href="index.html"> <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt=""></a>
+
+            </div>
+
+            <div class="navItemLeft">
+                <a href="kfcMenu.html">Menu</a>
+                <a href="Deals.html">Deals</a>
+            </div>
+
+            <div class="navItemRight">
+
+                <div class="accountIcon">
+                    <img src="https://i.ibb.co/zR1JpWH/Account-Icon.jpg" />
+                    <a href="sign.html">Sign In</a>
+                </div>
+
+                <div class="bucketIconDiv">
+                    <span id="priceUpdate">₹0</span>
+                    <div class="bucketIcon">
+                        <img src="https://i.ibb.co/ygnYs9m/bucket-cart-icon.jpg" />
+                        <div id="cartIconCount"><a href="cart.html">0</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="cart.html"><button>Cart</button></a>
+
+        <div id="main_container">
+
+            <div class="left-menu-section">
+                <div class="menu-container">
+
+            
+
+                    <h1 class="kfc-menu" style="margin-top: -10px;">KFC MENU</h1>
+
+                    <div class="outer-ul">
+                        <p><a href="#hot_deals">Hot Deals</a></p>
+                        <p><a href="#chicken_bucket">Chicken Buckets</a></p>
+                        <p><a href="#box_meals">Box Meals</a></p>
+                        <p><a href="#burgers">Burgers</a></p>
+                        <p><a href="#biryani_bucket">Biryani Buckets</a></p>
+                        <p><a href="#beverages">Beverages and Desserts</a></p>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="right-menu-section">
+                <div id="main_search-bar">
+                    <div><img src="https://online.kfc.co.in/static/media/searchIcon.0e00b33c.svg" alt=""></div>
+                    <input type="text" id="main_searched_item" placeholder="Search our menu">
+                </div>
+                <hr>
+
+
+                <div id="chicken_bucket">
+                    <h2><a name="chicken_bucket">CHICKEN BUCKET</a></h2>
+
+                    <div id="c_b"></div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div id="popup_container">
+            <div id="popup_left">
+                <div class="strips">
+                    <span class="strip-lines"></span>
+                    <span class="strip-lines"></span>
+                    <span class="strip-lines"></span>
+                </div>
+            </div>
+            <div id="popup_right">
+                <div id="popup_search-bar">
+                    <div><img src="https://online.kfc.co.in/static/media/searchIcon.0e00b33c.svg" alt=""></div>
+                    <input type="text" id="popup_searched_item" placeholder="Search our menu">
+                </div>
+                <hr>
+                <div id="searched_food"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Starts -->
+
+    <div class="footer">
+        <div class="footerFoot">
+            <div class="kfcLogo">
+                <img src="https://i.ibb.co/RgxGmkr/KFC-Logo.jpg" />
+            </div>
+
+            <ul>
+                <li>KFC Food</li>
+                <li>Menu</li>
+                <li>Order Lookup</li>
+                <li>Gift Card</li>
+            </ul>
+
+            <ul>
+                <li>Support</li>
+                <li>Get Help</li>
+                <li>Contact Us</li>
+                <li>KFC Feedbacks</li>
+            </ul>
+
+            <ul>
+                <li>Legal</li>
+                <li>Terms and Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Diclaimer</li>
+                <li>Caution Notice</li>
+            </ul>
+
+            <ul>
+                <li>KFC India</li>
+                <li>About KFC</li>
+                <li>KFC Care</li>
+                <li>Careers</li>
+                <li>Our Golden Past</li>
+            </ul>
+
+            <div class="location">
+                <div class="locationLogo">
+                    <img src="https://i.ibb.co/S6q7QpV/Find-KFC-removebg-preview.png" />
+                </div>
+                <div><a href="">Find a KFC</a></div>
+            </div>
+
+            <div class="buttonLogos">
+                <div class="buttonLogo1">
+                    <img src="https://i.ibb.co/HhTsvz7/185-1855993-play-button-png-transparent.png" />
+                </div>
+                <div class="buttonLogo2">
+                    <img src="https://i.ibb.co/MBbWX3j/5a902db97f96951c82922874.png" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bottomMost">
+            <div class="copyright">
+                <p>Copyright © KFC Corporation 2021 All Rights Reserved</p>
+            </div>
+            <div class="socialMedia">
+                <ul>
+                    <li><img src="https://i.ibb.co/k4G3xQX/Social-Insta-White.png" /></li>
+                    <li><img src="https://i.ibb.co/DCbScVM/Social-Facebook-White.png" /></li>
+                    <li><img src="https://i.ibb.co/TY7zLqX/Social-Twitter-White.png" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+   
+let cartLS = JSON.parse(localStorage.getItem("cart-page")) || [];
+
+    fetch("http://localhost:4500/foods")
+        .then(res => res.json())
+        .then(res => productData(res))
+        .catch(e => console.log(e))
+
+
+    function productData(chicken_bucket) {
+        let chicken_bkt = document.getElementById('c_b')
+
+        chicken_bucket.map((item) => {
+            let div = document.createElement(`div`)
+
+            let img = document.createElement(`img`)
+            img.src = item.image
+
+            let h3 = document.createElement(`p`)
+            h3.innerHTML = `<b>${item.title}<b>`
+            h3.style.fontSize = "18px"
+
+            let p1 = document.createElement(`p`)
+            p1.innerHTML = "₹ " + `<b>${item.price}</b>`
+
+            
+            let p3 = document.createElement(`p`)
+            p3.innerHTML = `<b>${item.calories}</b>`
+
+            let div_2 = document.createElement(`div`)
+            div_2.className = "description"
+            
+            let p2 = document.createElement(`p`)
+            p2.textContent = item.des
+            p2.style.fontSize = "15px"
+            p2.style.color = "gray"
+            div_2.append(p2)
+
+            let add_to_cart = document.createElement(`button`)
+            add_to_cart.textContent = "Add to Cart"
+     
+            div.append(img, h3, p1,p3, div_2, add_to_cart)
+            chicken_bkt.append(div)
+
+
+            add_to_cart.addEventListener("click", function () {
+                if (addToCartFunc(item.title) === true) {
+                    alert("Product Added");
+                    cartLS.push(item);
+                    localStorage.setItem("cart-page", JSON.stringify(cartLS));
+                } else {
+                    alert("Product Already Exist");
+                }
+
+
+                location.reload()
+            })
+
+        })
+        
+    }
+
+    function addToCartFunc(id) {
+        for (let i = 0; i < cartLS.length; i++) {
+            if (cartLS[i].title === id) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let cartData = JSON.parse(localStorage.getItem("cart-page"))
+
+
+
+    // let txt = document.getElementById('numprod')
+    let cart = JSON.parse(localStorage.getItem('cart-page'))
+
+</script>
