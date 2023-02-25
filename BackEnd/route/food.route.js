@@ -19,13 +19,18 @@ foodRouter.post("/create", async (req, res) => {
 })
     
 
-// app.delete("/delete", (req, res) => {
-//     res.send("data is deleted");
-// });
+foodRouter.delete("/delete/:id", async(req, res) => {
+    const foodID=req.params.id
+    await FoodModel.findByIdAndDelete({_id:foodID})
+    res.send({"msg":`food with id: ${foodID} has been deleted`});
+});
 
 
-// app.update("/patch", (req, res) => {
-//     res.send("data is updated");
-// });
+foodRouter.patch("/update/:id",async (req, res) => {
+    const foodID=req.params.id
+    const payload = req.body
+    await FoodModel.findByIdAndUpdate({_id:foodID},payload)
+    res.send({"msg":`food with id: ${foodID} has been updated`});
+});
 
 module.exports={foodRouter}
