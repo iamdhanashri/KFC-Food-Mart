@@ -5,64 +5,651 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cart.css">
+    <title>Cart</title>
+    <style>
+   /* navbar */
+   #navbar {
+            display: flex;
+            /* justify-content: space-between; */
+            padding-left: 4%;
+            padding-right: 4%;
+            background-color: white;
+            /* border: solid 1px black; */
+            width: 100vw;
 
-    
-    <title>Document</title>
+            height: 100px;
+            z-index: 9999;
+            top: 0;
+            /* bottom: 20; */
+            position: fixed;
+        }
+
+        .navItemLeft {
+            display: flex;
+            padding-top: 6px;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            position: relative;
+        }
+
+        .navItemLeft>a {
+            text-decoration: none;
+            all: unset;
+            cursor: pointer;
+            position: relative;
+            padding-top: 20%;
+            margin-right: 50px;
+            text-decoration: none;
+            font-weight: 550;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-size: 15px;
+            color: #202124;
+        }
+
+        .navItemRight {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            margin-left: 40%;
+            position: relative;
+        }
+
+        a img {
+            width: 76px;
+            height: 23px;
+            margin-top: 38px;
+            margin-right: 44.26px;
+            margin-bottom: 39.48px;
+            margin-left: 50px;
+            cursor: pointer;
+        }
+
+        .accountIcon {
+            display: flex;
+            border-right: 1px solid #cecece;
+            cursor: pointer;
+            width: 30%;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            /* padding-left: 10px; */
+            font-size: 13px
+        }
+
+        .accountIcon a {
+            margin-left: 20px;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        .accountIcon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .bucketIconDiv {
+            display: flex;
+            cursor: pointer;
+            padding-left: 20px;
+        }
+
+        .bucketIconDiv span {
+            padding-top: 20px;
+            padding-left: 5px;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-style: normal;
+            font-size: 13px;
+        }
+
+        .bucketIcon img {
+            width: 51px;
+            height: 51px;
+            margin-top: 8%;
+        }
+
+        #cartIconCount {
+            position: absolute;
+            top: 0;
+            right: 31%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 15px;
+            font-size: 13px;
+            text-align: center;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        /* main  */
+        .cart .cart-header .cart-header-text {
+            /* margin-left: 50px;  */
+            margin-top: 11px;
+            font-family: "National 2 Condensed";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 48px;
+            letter-spacing: 1.5px;
+            color: #202124;
+            /* width: 80%; */
+            /* margin: auto; */
+        }
+
+        #divbutton_in {
+            background: #333;
+            padding: 5px 14px;
+            font-size: 15px;
+            border: none;
+            color: white;
+            margin-right: 4px;
+            border-radius: 20px;
+        }
+
+        #divbutton_in:hover {
+            background-color: #e40002;
+
+        }
+
+        button#disc {
+            margin-bottom: 10px;
+            padding: 11px;
+            color: white;
+            background: #333;
+            border: none;
+            border-radius: 20px;
+        }
+
+        button#disc:hover {
+            background-color: #e40002(0, 98%, 44%);
+
+        }
+
+        /* -------------------------------------------------------------------- */
+        div#cart_1stsection {
+            margin: 50px;
+        }
+
+        .cart {
+            display: flex;
+        }
+
+        .cart_2ndsection {
+            border: 2px solid #e40002(225, 218, 218, 0.451);
+            padding: 40px;
+            margin: 20px;
+        }
+
+        #shipping,
+        #discnt,
+        .checkout {
+            padding: 10px 20px;
+            width: 360px;
+            margin-bottom: 20px;
+        }
+
+        /* select {
+            padding: 10px 20px;
+            width: 360px;
+            margin: 10px 0px;
+        } */
+
+        #zip {
+            width: 342px;
+            padding: 9px;
+        }
+
+        select#Country,
+        #State {
+            width: 360px;
+            padding: 11px;
+            margin: 10px 0px;
+        }
+
+        input#discountcode {
+            width: 200px;
+            padding: 10px;
+        }
+
+        label {
+            margin-top: 20px;
+        }
+
+        form {
+            margin: 10px 0px;
+        }
+
+        .priceSection {
+            display: flex;
+            justify-content: space-between;
+            /* margin: 10px 0px; */
+        }
+
+        .checkout {
+            background-color: #e40002;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .checkout:hover {
+            background-color: #333;
+            /* color: white; */
+            font-size: 16px;
+            /* border: none; */
+            border-radius: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #cat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #cat div:nth-child(2) {
+            width: 50%;
+            margin-left: 18%;
+            margin-top: -197px;
+            /* font-size: large; */
+        }
+
+        #cat button {
+            border-radius: 10px;
+        }
+
+        .cart_2ndsection {
+            background-color: white;
+            border-radius: 20px;
+            border-width: 50px;
+            box-shadow: 0px 1px 1px 1px #888888;
+            border: none;
+
+        }
+
+        .priceSection {
+            margin-bottom: -10px;
+        }
+
+        #Ordertotal {
+            margin-bottom: -20px;
+        }
+
+        #dice {
+            border-radius: 10px;
+        }
+
+        #cartdatadisplay {
+            border: 0px solid green;
+            background-color: #fff;
+        }
+
+        .cart_divs {
+            border: 0px solid brown;
+            display: grid;
+            background-color: #f8f7f5;
+            align-items: center;
+            margin: 10px;
+
+
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .p_cls {
+            border: 0px solid blue;
+            margin-left: 20%;
+            width: 230%;
+        }
+
+        .cart_divs div:nth-child(4) {
+            border: 0px solid red;
+            /* padding: px; */
+            width: 20%;
+            margin-left: 135%;
+
+        }
+
+        .dec_cls {
+            border: 1px solid #000;
+            margin-left: 180%;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            font-size: xx-large;
+            background-color: #fff;
+        }
+
+        .inc_cls {
+            border: 1px solid #000;
+            margin-left: 60%;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            font-size: xx-large;
+            background-color: #fff;
+        }
+
+        .cart_divs div:nth-child(6) {
+            margin-left: 40%;
+        }
+
+        .cross_cls {
+            /* border: 2px solid rgb(0, 0, 255); */
+            margin-left: 6%;
+            margin-top: 10%;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            height: 30px;
+            border-radius: 10px;
+            
+        }
+    </style>
 </head>
 
 <body>
-    <div id="kfcMenu">
-        <!-- kfcMenu Page -->
-   
+    <div id="navbar">
+        <div>
+
+            <a href="index.html"> <img style="height:60px; width: 100px;" src="./assets/FoodMart.png" alt=""></a>
 
 
+        </div>
 
+        <div class="navItemLeft">
+            <a href="kfcMenu.html">Menu</a>
+            <a href="Deals.html">Deals</a>
+        </div>
+
+        <div class="navItemRight">
+
+            <div class="accountIcon">
+                <img src="https://i.ibb.co/zR1JpWH/Account-Icon.jpg" />
+                <a href="Login.html">Sign In</a>
+            </div>
+
+            <div class="bucketIconDiv">
+                <a href="cart.html">
+                    <div class="bucketIcon">
+                        <img src="https://i.ibb.co/ygnYs9m/bucket-cart-icon.jpg" />
+                        <div id="cartIconCount"> </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
     </div>
+    <div class="cart">
+        <div class="cart-header" data-testid="cart-header-test">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAeCAYAAAB5c901AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABNSURBVHgB7c9BDQAgAMPAgQ4c4F8KDvABFuBHSe+9LGmZ6SsXWkY52b3yW/M5A+kMpDOQzkA6A+kMpDOQzkA6A+kMpDOQzkA6A+kMpNu9MQhKmC+cDgAAAABJRU5ErkJggg=="
+                alt=" ">
+            <h1 class="cart-header-text">MY CART</h1>
+        </div>
+    </div>
+    <!-- <div class="cart">
+        <h1>MY CART</h1>
+    </div> -->
+    <div class="cart" id="cart">
+        <div id="cart_1stsection" style="width:60% ;background-color: #f8f7f5; border-radius: 20px;">
+            <div>
+                <div id="cartdatadisplay">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cart_2ndsection" style="width:30% ;">
+            <h1> ITEMS</h1>
+            <div class="priceSection">
+                <div>
+                    <p>Subtotal</p>
+                </div>
+                <div>
+                    <p id="subtotal">0</p>
+                </div>
+            </div>
+
+            <div class="priceSection">
+                <div>
+                    <p>Restaurant Handling Charges</p>
+                </div>
+                <div>
+                    <p id="Handlingchrges">50</p>
+                </div>
+            </div>
+            <div class="priceSection">
+                <div>
+                    <p>Order Total </p>
+                </div>
+                <div>
+                    <p id="Ordertotal">0</p>
+                </div>
+            </div>
+
+
+            <br>
+            <div id="input_code"></div>
+
+            <div>
+
+                <a href="payment.html"> <button class="checkout">CHECKOUT</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
 </body>
-
-</html>
-
 
 
 <script>
-    let productCont = document.getElementById("kfcMenu");
-    let cartLS = JSON.parse(localStorage.getItem("cart-page")) || [];
-    displayProducts(cartLS)
-    console.log(cartLS)
-
-    function displayProducts(productData) {
-        productCont.innerHTML = "";
-
-        productData.forEach(function (elem) {
-
-        let product = document.createElement("div");
-
-        let img = document.createElement("img");
-        img.src = elem.image;  
+    var dataofaddedcart = JSON.parse(localStorage.getItem("cart-page")) || [];
 
 
-        let title = document.createElement("h3");
-        title.textContent = elem.title;
+
+    window.addEventListener("load", function () {
+        displayData(dataofaddedcart);
+        console.log("check")
+    });
 
 
-        let price = document.createElement("p");
-        price.innerText = Number(elem.price);
+    var totally_total = 0;
+    var n = 50;
+    var quantity = 0;
+
+    function displayData(dataofaddedcart) {
+
+        var sub = document.querySelector("#subtotal");
+        var whole_total = document.getElementById("Ordertotal");
+
+        dataofaddedcart.map(function (elem, index) {
+            quantity++;
 
 
-        let calories = document.createElement("p");
-        calories.innerText = Number(elem.calories);
+            var cartdivs = document.createElement("div");
+            cartdivs.classList.add("cart_divs");
+
+            var imgdiv = document.createElement("div");
+            var image = document.createElement("img");
+            image.style.height = "150px";
+            image.style.width = "150px";
 
 
-        let des = document.createElement("p");
-        des.textContent = elem.des;
-        
-    
-        product.append(img, title, price, calories,des)
-            productCont.append(product)
+            image.setAttribute("src", elem.image);
 
-        })
+            image.classList.add("imgcls");
+            imgdiv.append(image);
+
+            var desdiv = document.createElement("div");
+            var desname = document.createElement("p");
+            desname.textContent = elem.title;
+            desname.classList.add("p_cls");
+            desdiv.append(desname);
+
+            var decramtdiv = document.createElement("div");
+            var damt = document.createElement("button");
+            damt.textContent = "-";
+
+            damt.addEventListener("click", function () {
+                decrease_qty(qty, elem.price, total, sub, whole_total, elem, index);
+                // console.log(qty, elem.price, t);
+            });
+
+            damt.classList.add("dec_cls");
+            decramtdiv.append(damt);
+
+            var qtydiv = document.createElement("div");
+            var qty = document.createElement("p");
+            qty.textContent = Number(1);
+            qty.classList.add("q_cls");
+            qtydiv.append(qty);
+
+            var incramtdiv = document.createElement("div");
+            var iamt = document.createElement("button");
+            iamt.textContent = "+";
+
+            iamt.addEventListener("click", function () {
+                increase_qty(qty, elem.price, total, sub, whole_total, elem, index);
+            });
+
+            iamt.classList.add("inc_cls");
+            incramtdiv.append(iamt);
+
+            var ttldiv = document.createElement("div");
+            // var dollar = document.createElement("span");
+            // dollar.textContent = " $ " ;
+            var total = document.createElement("p");
+            ttldiv.classList.add("ttldiv_dollar")
+            var t = Number(elem.price);
+            total.textContent = t;
+            // console.log(t)
+            totally_total = totally_total + t;
+            ttldiv.append(total);
+
+
+
+            cartdivs.append(imgdiv, desdiv, decramtdiv, qtydiv, incramtdiv, ttldiv);
+
+            var cross = document.createElement("button");
+            cross.textContent = "remove";
+            cross.addEventListener("click", function () {
+                removeProduct(index);
+            });
+            cross.classList.add("cross_cls");
+
+            cartdivs.append(cross)
+
+            document.getElementById("cartdatadisplay").append(cartdivs);
+
+
+
+        });
+
+        sub.textContent = totally_total.toFixed(2);
+
+        n = n + totally_total;
+        console.log(n, "n-before")
+        whole_total.textContent = n;
+        console.log(whole_total.value, "not increment")
+
+        localStorage.setItem("totalcartvalue", totally_total);
+
+
+    }
+
+    localStorage.setItem("totalcartvalue", totally_total);
+
+    function removeProduct(index) {
+        dataofaddedcart.splice(index, 1);
+        localStorage.setItem("cart-page", JSON.stringify(dataofaddedcart));
+        location.reload();
+    }
+    // ncrease_qty(qty, elem.price, total, elem ,index)
+    function increase_qty(q, sp, total, sub, whole_total, elem, index) {
+        var q1 = (Number)(q.textContent) + 1;
+        q.textContent = q1;
+        console.log(q1)
+        console.log(sp)
+
+
+        var pret = Number(total.textContent);
+        console.log("pret", pret)
+        var newtotal = (q1 * sp);
+        total.textContent = newtotal.toFixed(1);
+
+        totally_total = totally_total - pret;
+        totally_total = totally_total + newtotal;
+        sub.textContent = totally_total.toFixed(1);
+        n = "";
+        var n = 50;
+        n = n + totally_total;
+        console.log(n, "n- incr")
+        whole_total.textContent = n;
+
+        console.log(whole_total, " increment")
+        // whole_total.textContent  = sub.textContent;
+        // console.log("sub", sub);  
+
+        elem.qty = Number(q1);                       //added by aman
+        localStorage.setItem("cartdata", JSON.stringify(dataofaddedcart));     // Added by aman
+        localStorage.setItem("totalcartvalue", totally_total.toFixed(1));
+        // localStorage.setItem("totalsavings" , )
 
 
 
     }
+    // decrease function
+    function decrease_qty(q, sp, total, sub, whole_total, elem, index) {
+
+        var qtemp = Number(q.textContent);
+
+        if (qtemp > 1) {
+            var q1 = (Number)(q.textContent) - 1;
+            q.textContent = q1;
+            var pret = Number(total.textContent);
+            var newtotal = (q1 * sp);
+            total.textContent = newtotal.toFixed(1);
+
+            totally_total = totally_total - pret;
+            totally_total = totally_total + newtotal;
+            sub.textContent = totally_total.toFixed(1);
+
+            n = "";
+            var n = 50;
+            n = n + totally_total;
+            console.log(n, "n- incr")
+            whole_total.textContent = n;
+
+            elem.qty = Number(q1);
+            localStorage.setItem("productdetail", JSON.stringify(dataofaddedcart));
+
+            localStorage.setItem("totalcartvalue", totally_total.toFixed(1));
+
+        } else {
+            removeProduct(index);
+        }
+
+    }
+
+    var count = 1;
+    var save = 0;
+
+// var q = document.getElementById("itemm");
+// q.textContent = "";
+// q.textContent = quantity;
+
+
+
+
+
 </script>
