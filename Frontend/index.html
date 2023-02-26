@@ -11,8 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <title>MEN</title>
-    <link rel="stylesheet" href="men.css">
+    <title>Home Page</title>
 
     <style>
         /* navbr */
@@ -169,6 +168,7 @@
             /* border: 1px solid orange; */
             margin: auto;
             background-color: rgb(243, 237, 237);
+            padding: 50px;
 
         }
 
@@ -288,8 +288,8 @@
 
         .styleFeed {
             width: 100%;
-            height: 500px;
-            background-color: #9CF0E0;
+            height: 600px;
+            background-color: rgb(32, 33, 36);
             padding-top: 50px;
             margin-bottom: 50px;
             margin-top: 100px;
@@ -301,7 +301,9 @@
             text-align: center;
             position: relative;
             width: 250px;
-            height: 380px;
+            height: 420px;
+            border-radius: 15px;
+
             /* border: 1px solid green; */
 
         }
@@ -342,7 +344,7 @@
             background: rgba(0, 0, 0, 0.6);
         }
 
-        .thumb-wrapper button{
+        .thumb-wrapper button {
             height: 50px;
             width: 150px;
             border-radius: 30px;
@@ -355,6 +357,138 @@
             /* width: 50px;
     height: 40px; */
         }
+
+        /* foote */
+
+
+
+        #main_container_footer {
+            margin-top: 20px;
+            width: 1535px;
+            background-color: rgb(32, 33, 36);
+            padding-left: 200px;
+            padding-right: 200px;
+            margin-left: -20%;
+        }
+
+        /* -----------<<<<<<<<<< main footer >>>>>>>>>--------- */
+
+        #main_footer {
+
+            display: flex;
+            justify-content: space-between;
+            color: rgb(224, 221, 221);
+            font-family: "Fira Sans Condensed", sans-serif;
+            font-size: 10px;
+
+        }
+
+        /* -----------<<<<<<<<<<left footer >>>>>>>>>--------- */
+
+        #left_footer {
+            width: 100%;
+            height: 45%;
+            /* border: 1px solid; */
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 5%;
+        }
+
+        #left_footer>div>img {
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        #left_footer>div>p {
+            color: white;
+            font-size: 10px;
+            font-weight: 100;
+        }
+
+        /* -----------<<<<<<<<<< right footer >>>>>>>>>--------- */
+        #right_footer {
+            width: 100%;
+            height: 45%;
+            margin-top: 4%;
+            /* border: 1px solid; */
+            display: flex;
+            justify-content: space-evenly;
+            /* margin: 20px; */
+            margin-left: 30px;
+        }
+
+        #right_footer>div {
+            margin: 15px;
+        }
+
+        a {
+            color: rgb(224, 221, 221);
+        }
+
+        #right_footer>div>a {
+            font-size: 10px;
+            font-weight: 100;
+        }
+
+        /* -----------<<<<<<<<<< paragraph_footer >>>>>>>>>--------- */
+        #paragraph_footer {
+            /* border: 1px solid; */
+            margin: auto;
+
+            /* margin-bottom: 100px; */
+            /* margin-left: -100%; */
+        }
+
+        /* -----------<<<<<<<<Span Paragarph>>>>>>>>>>--------- */
+        #span_paragraph {
+            /* width: 30%; */
+            /* border: 1px solid; */
+            margin: auto;
+            color: rgb(224, 221, 221);
+            /* margin-bottom: px; */
+        }
+
+        #span_paragraph span {
+            color: rgb(224, 221, 221);
+            font-size: 10px;
+            font-weight: 100;
+        }
+
+        /* -----------<<<<<<<<id_of_media Paragarph>>>>>>>>>>--------- */
+        #id_of_media {
+            /* border: 1px solid; */
+            /* width: 7%; */
+            display: flex;
+            justify-content: end;
+            padding-right: 20%;
+            padding-top: -5%;
+            margin-right: -170px;
+            gap: 15px;
+        }
+
+        #id_of_media>div {
+            border: 1px solid rgb(61, 60, 60);
+            /* width: 60%; */
+            border-radius: 50%;
+            /* margin-bottom: 5px; */
+            padding: 10px;
+
+        }
+
+        #icons_media {
+            /* width: 20%; */
+            height: 13%;
+            /* border: 1px solid; */
+            text-align: center;
+            display: flex;
+            padding: 3% 3%;
+            /* margin-top: 10px; */
+        }
+
+        .material-symbols-outlined {
+            color: red;
+            /* margin-top: 10px; */
+        }
     </style>
     <title>Document</title>
 
@@ -365,13 +499,13 @@
     <div id="navbar">
         <div>
 
-            <a href="index.html"> <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt=""></a>
+            <a href="index.html"> <img style="height:60px; width: 100px;"  src="./assets/FoodMart.png" alt=""></a>
 
         </div>
 
         <div class="navItemLeft">
             <a href="kfcMenu.html">Menu</a>
-            <a href="Deals.html">Deals</a>
+            <a href="#">Deals</a>
         </div>
 
         <div class="navItemRight">
@@ -382,11 +516,16 @@
             </div>
 
             <div class="bucketIconDiv">
-                <span id="priceUpdate">₹0</span>
-                <div class="bucketIcon">
-                    <img src="https://i.ibb.co/ygnYs9m/bucket-cart-icon.jpg" />
-                    <div id="cartIconCount"><a href="cart.html">0</a> </div>
-                </div>
+                <a href="cart.html">
+                    <div class="bucketIcon">
+                        <img src="https://i.ibb.co/ygnYs9m/bucket-cart-icon.jpg" />
+                        <div id="cartIconCount"> </div>
+                    </div>
+                </a>
+
+            </div>
+            <div>
+                <a href="admin.html">Admin</a>
             </div>
         </div>
     </div>
@@ -396,37 +535,43 @@
         <h4>LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</h4>
         <button>Start Order</button>
     </div>
-    <div class="div2">
-        <h1>WELCOME TO KFC!</h1>
-    </div>
+
 
 
     <!-- corosol top  -->
 
-    
+
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="https://images.ctfassets.net/wtodlh47qxpt/3Q9nVrzAkO9gXkxk2OqKFS/c4077fb9cd4da6918f5363959a69e53b/Chizza_Banner_1440x396_delviery.jpg?w=1536&fit=fill&fm=webp" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://images.ctfassets.net/wtodlh47qxpt/4wzmNLWjqVZZl95Fcf48r2/90bd1294b970f903545d8f0f5278b28a/Allu_Arjun_Combo_Meal__1440x396px.jpg?w=1536&fit=fill&fm=webp" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://images.ctfassets.net/wtodlh47qxpt/500GRYvL6xfLzNRY68rr4u/c66030e22aa477594939c55281fc00fd/variety_bucket_banner_1440x396px.jpg?w=1536&fit=fill&fm=webp" alt="Third slide">
-          </div>
+            <div class="carousel-item active">
+                <img class="d-block w-100"
+                    src="https://images.ctfassets.net/wtodlh47qxpt/3Q9nVrzAkO9gXkxk2OqKFS/c4077fb9cd4da6918f5363959a69e53b/Chizza_Banner_1440x396_delviery.jpg?w=1536&fit=fill&fm=webp"
+                    alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"
+                    src="https://images.ctfassets.net/wtodlh47qxpt/4wzmNLWjqVZZl95Fcf48r2/90bd1294b970f903545d8f0f5278b28a/Allu_Arjun_Combo_Meal__1440x396px.jpg?w=1536&fit=fill&fm=webp"
+                    alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"
+                    src="https://images.ctfassets.net/wtodlh47qxpt/500GRYvL6xfLzNRY68rr4u/c66030e22aa477594939c55281fc00fd/variety_bucket_banner_1440x396px.jpg?w=1536&fit=fill&fm=webp"
+                    alt="Third slide">
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
         </a>
-      </div>
+    </div>
 
-
+    <div class="div2">
+        <h1>WELCOME TO FOOD MART!</h1>
+    </div>
     <!-- main div -->
     <div class="maindiv">
         <div class="maindiv1">
@@ -477,7 +622,7 @@
     <!-- bottom div -->
 
     <div class="bottomdi">
-        <h1>OFFERS & DEALS</h1>
+
 
         <!-- product div -->
         <div class="productdiv">
@@ -513,196 +658,192 @@
 
         <!-- bottom div -->
 
-    <div class="bottomdi">
-        <h1>OFFERS & DEALS</h1>
-
-        <!-- corosel -->
+        <div class="bottomdi">
 
 
-        <!-- slide -->
-        <div class="styleFeed">
+            <!-- corosel -->
 
-            <div class="container-xl">
-                <div class="row">
-                    <div class="col-md-12">
 
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item carousel-item active">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <div class="thumb-wrapper">
+            <!-- slide -->
+            <div class="styleFeed">
+                <h1 style="margin-left: 20px; color: white;">OFFERS & DEALS</h1>
+                <div class="container-xl">
+                    <div class="row">
+                        <div class="col-md-12">
 
-                                                <div class="img-box">
-                                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/CHKZINGER.jpg?ver=25.4"
-                                                        class="img-fluid" alt="">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item carousel-item active">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="thumb-wrapper">
+
+                                                    <div class="img-box">
+                                                        <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/CHKZINGER.jpg?ver=25.4"
+                                                            class="img-fluid" alt="">
+                                                    </div>
+                                                    <h2>FREE CHICHEN</h2>
+                                                    <p>Free Chicken Zinger on cart value of 599 or more.friday only</p>
+                                                    <button>Redeem</button>
                                                 </div>
-                                                <h2>FREE CHICHEN</h2>
-                                                <p>Free Chicken Zinger on cart value of 599 or more.friday only</p>
-                                                <button>Redeem</button>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="thumb-wrapper">
+
+                                                    <div class="img-box">
+                                                        <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/VEGZINGER.jpg?ver=25.4"
+                                                            class="img-fluid" alt="">
+
+                                                    </div>
+                                                    <h2>FREE POPCORN</h2>
+                                                    <p>Free Popcorn (Med) on a cart value of 499 or more.Friday only</p>
+                                                    <button>Redeem</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="thumb-wrapper">
+
+                                                    <div class="img-box">
+                                                        <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/ADDCHK99.jpg?ver=25.4"
+                                                            class="img-fluid" alt="">
+                                                    </div>
+                                                    <h2>FREE 1PC </h2>
+                                                    <p>Free 1pc Chicken on a cart value of 499 or more.Friday only</p>
+                                                    <button>Redeem</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="thumb-wrapper">
+                                                    <div class="img-box">
+                                                        <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/BIGSAVE.jpg?ver=25.4"
+                                                            class="img-fluid" alt="">
+                                                    </div>
+                                                    <h2>FREE 3PC STRIPS </h2>
+                                                    <p>Free 3pc strips on a cart value of 499 or more.Friday only</p>
+                                                    <button>Redeeem</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
-                                            <div class="thumb-wrapper">
+                                    </div>
+                                    <div class="item carousel-item">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="thumb-wrapper">
 
-                                                <div class="img-box">
-                                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/VEGZINGER.jpg?ver=25.4"
-                                                        class="img-fluid" alt="">
+                                                    <div class="img-box">
+                                                        <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/CHKZINGER.jpg?ver=25.4"
+                                                            class="img-fluid" alt="">
+                                                    </div>
+                                                    <h2>FREE CHICHEN</h2>
+                                                    <p>Free Chicken Zinger on cart value of 599 or more.friday only</p>
+                                                    <button>Redeem</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="thumb-wrapper">
+
+                                                    <div class="img-box">
+                                                        <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/VEGZINGER.jpg?ver=25.4"
+                                                            class="img-fluid" alt="">
+                                                    </div>
+                                                    <h2>FREE POPCORN</h2>
+                                                    <p>Free Popcorn (Med) on a cart value of 499 or more.Friday only</p>
+                                                    <button>Redeem</button>
 
                                                 </div>
-                                                <h2>FREE POPCORN</h2>
-                                                <p>Free Popcorn (Med) on a cart value of 499 or more.Friday only</p>
-                                                <button>Redeem</button>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="thumb-wrapper">
+
+                                                    <div class="img-box">
+                                                        <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/ADDCHK99.jpg?ver=25.4"
+                                                            class="img-fluid" alt="">
+                                                    </div>
+                                                    <h2>FREE 1PC </h2>
+                                                    <p>Free 1pc Chicken on a cart value of 499 or more.Friday only</p>
+                                                    <button>Redeem</button>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+
+                                        <!-- footer div  -->
+
+
+                                    </div>
+                                </div>
+
+                                <div id="main_container_footer">
+                                    <div id="main_footer">
+                                        <div id="left_footer">
+                                            <div>
+                                                <img src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg"
+                                                    alt="footer_logo img" />
+                                            </div>
+                                            <div>
+                                                <p>FoodMart Food</p>
+                                                <p>Menu</p>
+                                                <p>Order Lookup</p>
+                                                <p>Gift Card</p>
+                                                <p>Nutrition & Allergen</p>
+                                            </div>
+                                            <div>
+                                                <p>Support</p>
+                                                <p>Get Help</p>
+                                                <p>Contact Us</p>
+                                                <p>FoodMart Feedback</p>
+                                                <p>Privacy Policy</p>
+                                            </div>
+                                            <div>
+                                                <p>Legel</p>
+                                                <p>Terms and Conditions</p>
+                                                <p>Privacy Policy</p>
+                                                <p>Disclaimer</p>
+                                                <p>Caultion Notice</p>
+                                            </div>
+                                            <div>
+                                                <p>FoodMart India</p>
+                                                <p>About FoodMart</p>
+                                                <p>FoodMart Care</p>
+                                                <p>Careers</p>
+                                                <p>Our Golden Past</p>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
-                                            <div class="thumb-wrapper">
-
-                                                <div class="img-box">
-                                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/ADDCHK99.jpg?ver=25.4"
-                                                        class="img-fluid" alt="">
-                                                </div>
-                                                <h2>FREE 1PC </h2>
-                                                <p>Free 1pc Chicken on a cart value of 499 or more.Friday only</p>
-                                                <button>Redeem</button>
+                                        <div id="right_footer">
+                                            <div>
+                                                <a href="#"><span
+                                                        class="material-symbols-outlined">location_on</span>Find a
+                                                        FoodMart</a>
+                                            </div>
+                                            <div>
+                                                <img src="https://images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg"
+                                                    alt="app store img" />
+                                            </div>
+                                            <div>
+                                                <img src="https://images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg"
+                                                    alt="app store img" />
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
-                                            <div class="thumb-wrapper">
-                                                <div class="img-box">
-                                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/BIGSAVE.jpg?ver=25.4"
-                                                        class="img-fluid" alt="">
-                                                </div>
-                                                <h2>FREE 3PC STRIPS </h2>
-                                                <p>Free 3pc strips on a cart value of 499 or more.Friday only</p>
-                                                <button>Redeeem</button>
-                                            </div>
+                                    </div>
+                                    <div id="icons_media">
+                                        <div id="span_paragraph">
+                                            <span>Copyright © FoodMart Corporation 2021 All Rights Reserved</span>
+                                        </div>
+                                        <div id="id_of_media">
+                                            <div><a href="#" class="fa fa-instagram"></a></div>
+                                            <div><a href="#" class="fa fa-facebook"></a></div>
+                                            <div><a href="#" class="fa fa-twitter"></a></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item carousel-item">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <div class="thumb-wrapper">
-
-                                                <div class="img-box">
-                                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/CHKZINGER.jpg?ver=25.4"
-                                                        class="img-fluid" alt="">
-                                                </div>
-                                                <h2>FREE CHICHEN</h2>
-                                                <p>Free Chicken Zinger on cart value of 599 or more.friday only</p>
-                                                <button>Redeem</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="thumb-wrapper">
-
-                                                <div class="img-box">
-                                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/VEGZINGER.jpg?ver=25.4"
-                                                        class="img-fluid" alt="">
-                                                </div>
-                                                <h2>FREE POPCORN</h2>
-                                                <p>Free Popcorn (Med) on a cart value of 499 or more.Friday only</p>
-                                                <button>Redeem</button>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="thumb-wrapper">
-
-                                                <div class="img-box">
-                                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/ADDCHK99.jpg?ver=25.4"
-                                                        class="img-fluid" alt="">
-                                                </div>
-                                                <h2>FREE 1PC </h2>
-                                                <p>Free 1pc Chicken on a cart value of 499 or more.Friday only</p>
-                                                <button>Redeem</button>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="col-sm-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="https://content.asos-media.com/-/media/images/articles/men/2023/01/01-sun/trend-thumb.jpg?h=300&w=300&hash=92595D109063F185E1555FE937F8B158"
-                                                    class="img-fluid" alt="">
-                                            </div>
-                                            <h5>THE HOTTEST TRENDS OF 2023</h5>
-                                            <p>*immediately grabs notepad*</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="item carousel-item">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="https://content.asos-media.com/-/media/images/articles/men/2022/11/13-sun/microsoftteams-image-(6).png?h=300&w=300&hash=AA334D597CA22ADB93C192F2735B842F"
-                                                    class="img-fluid" alt="">
-                                            </div>
-                                            <h5>THE HOTTEST TRENDS OF 2023</h5>
-                                            <p>*immediately grabs notepad*</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="https://content.asos-media.com/-/media/images/articles/men/2022/11/27/boots-thumb.jpg?h=300&w=300&hash=911D9804DE02905E1439A817EC2E9A03"
-                                                    class="img-fluid" alt="">
-                                            </div>
-                                            <h5>THE HOTTEST TRENDS OF 2023</h5>
-                                            <p>*immediately grabs notepad*</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="https://content.asos-media.com/-/media/images/articles/men/2023/01/14-sat/activewear-1.jpg?h=1100&w=870&la=en-US&hash=05199B1446FD834BB4EB555AC5157AD6"
-                                                    class="img-fluid" alt="">
-                                            </div>
-                                            <h5>THE HOTTEST TRENDS OF 2023</h5>
-                                            <p>*immediately grabs notepad*</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper">
-
-                                            <div class="img-box">
-                                                <img src="https://content.asos-media.com/-/media/images/articles/men/2023/01/14-sat/active-6.jpg?h=1100&w=870&la=en-US&hash=93AEEA5F6FFAE3C71AF247CB459A90D1"
-                                                    class="img-fluid" alt="">
-                                            </div>
-                                            <h5>THE HOTTEST TRENDS OF 2023</h5>
-                                            <p>*immediately grabs notepad*</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-                                    </div>
-
-
-
-                                    <!-- footer div  -->
-
-                                </div>
-                            </div>
 
 </body>
 

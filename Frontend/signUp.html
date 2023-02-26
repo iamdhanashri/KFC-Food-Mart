@@ -299,14 +299,27 @@
 
 
         }
+        .loginBtn{
+    border: none;
+    width: 80px;
+    height: 50px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+  }
+  #header img{
+                width: 100px;
+                height: 100px;
+        }
     </style>
     <title>Document</title>
 </head>
 
 <body>
     <div id="header">
-        <h1>Kentucky Fried Chicken</h>
-    </div>
+        <img src="./assets/FoodMart.png" alt="">
+           
+       </div>
     <div id="container">
 
 
@@ -333,15 +346,12 @@
             <input type="password" id="password" placeholder="Enter password here">
             <br>
             <br>
-            <button onclick="onSingup()">Sign Up</button>
+            <button class="loginBtn" onclick="onSingup()">Sign Up</button>
 
  <br> <br>
             <input type="checkbox" id="termcondition1">
 
-            <label id="term1">By selecting the box, you agree to our <u>Privacy Policy</u> and <u>Terms of
-                    USe</u></label><br>
-
-            <input type="checkbox" id="termcondition2">
+        
 
             <label id="term2">Sing up for Email updates and Promotions</label>
 
@@ -382,9 +392,25 @@
             },
             body: JSON.stringify(payload)
         }).then(res => res.json())
-            .then(res => console.log(res))
+            .then(res => {
+        console.log(res)
+        if(res.msg=="user registration successful"){
+            alert("User Registration Successful")
+            window.location.href = "Login.html"
+        }
+        else{
+            alert("Login Failed")
+
+        }
+    })
             .catch(err => console.log(err))
+
+
+
+            
     };
+
+
 </script>
 
 </html>

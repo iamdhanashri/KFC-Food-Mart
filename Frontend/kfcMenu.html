@@ -24,6 +24,7 @@
             margin-left: 100px;
             position: fixed;
             top: 100px;
+            /* border: 1px solid red;    */
         }
 
         .strips {
@@ -366,65 +367,7 @@
             margin-right: 10px;
         }
 
-        .footer {
-            width: 100%;
-            background-color: rgb(32, 33, 36);
-            margin-top: 10%;
-            position: absolute;
-            padding-top: 50px;
-        }
-
-        .stripsDiv {
-            display: flex;
-            margin-left: 240px;
-        }
-
-        .strips {
-            width: 15px;
-            height: 40px;
-            background-color: #E4002B;
-            margin-right: 13px;
-        }
-
-        .kfcLogo {
-            margin-left: 150px;
-            margin-right: 150px;
-        }
-
-        .kfcLogo img {
-            width: 60px;
-            height: 60px;
-        }
-
-        .footerFoot {
-            display: flex;
-            margin-bottom: 5%;
-            
-        }
-
-        .footerFoot ul {
-            margin-right: 50px;
-            margin-top: 50px;
-        }
-
-        .footerFoot ul li {
-            list-style: none;
-            color: #fff;
-            font-family: 'Fira Sans Condensed', sans-serif;
-            cursor: pointer;
-            font-weight: 200;
-           
-        }
-
-        .footerFoot ul li a {
-            list-style: none;
-            color: #fff;
-            font-family: 'Fira Sans Condensed', sans-serif;
-            cursor: pointer;
-            font-weight: 200;
-            text-decoration: none;
-        }
-
+      
 
         .location {
             display: flex;
@@ -579,15 +522,136 @@
             font-style: normal;
             font-weight: 700;
         }
+
+
+
+        /* footer  */
+
+        
+#main_container_footer {
+ 
+            margin-top: 20px;
+            width: 1520px;
+            background-color: rgb(32, 33, 36);
+        
+}
+/* -----------<<<<<<<<<< main footer >>>>>>>>>--------- */
+
+#main_footer {
+
+  display: flex;
+  justify-content: space-between;
+  color: rgb(224, 221, 221);
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 10px;
+
+}
+/* -----------<<<<<<<<<<left footer >>>>>>>>>--------- */
+
+#left_footer {
+  width: 100%;
+  height: 45%;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+#left_footer > div > img {
+  margin: auto;
+  margin-top: 10px;
+}
+
+#left_footer > div>p{
+  color:white;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+/* -----------<<<<<<<<<< right footer >>>>>>>>>--------- */
+#right_footer {
+  width: 100%;
+  height: 45%;
+  margin-top: 4%;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-evenly;
+  /* margin: 20px; */
+  margin-left: 30px;
+}
+#right_footer > div {
+  margin: 15px;
+}
+a {
+  color: rgb(224, 221, 221);
+}
+
+#right_footer > div>a{
+  font-size: 10px;
+  font-weight: 100;
+}
+/* -----------<<<<<<<<<< paragraph_footer >>>>>>>>>--------- */
+#paragraph_footer {
+  /* border: 1px solid; */
+  margin: auto;
+
+  /* margin-bottom: 100px; */
+  /* margin-left: -100%; */
+}
+/* -----------<<<<<<<<Span Paragarph>>>>>>>>>>--------- */
+#span_paragraph {
+  /* width: 30%; */
+  /* border: 1px solid; */
+  margin: auto;
+  color: rgb(224, 221, 221);
+  /* margin-bottom: px; */
+}
+#span_paragraph span{
+  color: rgb(224, 221, 221);
+  font-size: 10px;
+  font-weight: 100;
+}
+
+/* -----------<<<<<<<<id_of_media Paragarph>>>>>>>>>>--------- */
+#id_of_media {
+  /* border: 1px solid; */
+  /* width: 7%; */
+  display: flex;
+  justify-content: end;
+  padding-right: 20%;
+  padding-top: -5%;
+  margin-right: -170px;
+  gap: 15px;
+}
+#id_of_media > div{
+  border: 1px solid rgb(61, 60, 60);
+  /* width: 60%; */
+  border-radius: 50%;
+  /* margin-bottom: 5px; */
+  padding: 10px;
+
+}
+#icons_media {
+  /* width: 20%; */
+  height: 13%;
+  /* border: 1px solid; */
+  text-align: center;
+  display: flex;
+  padding: 3% 3%;
+  /* margin-top: 10px; */
+}
+.material-symbols-outlined{
+  color: red;
+  /* margin-top: 10px; */
+}
     </style>
 </head>
 
 <body>
     <div id="header">
         <div id="navbar">
-            <div>
+            <div >
 
-                <a href="index.html"> <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt=""></a>
+                <a href="index.html"> <img style="height:60px; width: 100px;" src="./assets/FoodMart.png" alt=""></a>
 
             </div>
 
@@ -600,14 +664,17 @@
 
                 <div class="accountIcon">
                     <img src="https://i.ibb.co/zR1JpWH/Account-Icon.jpg" />
-                    <a href="sign.html">Sign In</a>
+                    <a href="Login.html">Sign In</a>
                 </div>
-
                 <div class="bucketIconDiv">
                     <span id="priceUpdate">₹0</span>
+
                     <div class="bucketIcon">
                         <img src="https://i.ibb.co/ygnYs9m/bucket-cart-icon.jpg" />
+                        <a href="cart.html">
                         <div id="cartIconCount"><a href="cart.html">0</a> </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -622,7 +689,7 @@
 
             
 
-                    <h1 class="kfc-menu" style="margin-top: -10px;">KFC MENU</h1>
+                    <h1 class="kfc-menu" style="margin-top: 10px;">FOOD MART MENU</h1>
 
                     <div class="outer-ul">
                         <p><a href="#hot_deals">Hot Deals</a></p>
@@ -679,75 +746,66 @@
     </div>
 
     <!-- Footer Starts -->
-
-    <div class="footer">
-        <div class="footerFoot">
-            <div class="kfcLogo">
-                <img src="https://i.ibb.co/RgxGmkr/KFC-Logo.jpg" />
-            </div>
-
-            <ul>
-                <li>KFC Food</li>
-                <li>Menu</li>
-                <li>Order Lookup</li>
-                <li>Gift Card</li>
-            </ul>
-
-            <ul>
-                <li>Support</li>
-                <li>Get Help</li>
-                <li>Contact Us</li>
-                <li>KFC Feedbacks</li>
-            </ul>
-
-            <ul>
-                <li>Legal</li>
-                <li>Terms and Conditions</li>
-                <li>Privacy Policy</li>
-                <li>Diclaimer</li>
-                <li>Caution Notice</li>
-            </ul>
-
-            <ul>
-                <li>KFC India</li>
-                <li>About KFC</li>
-                <li>KFC Care</li>
-                <li>Careers</li>
-                <li>Our Golden Past</li>
-            </ul>
-
-            <div class="location">
-                <div class="locationLogo">
-                    <img src="https://i.ibb.co/S6q7QpV/Find-KFC-removebg-preview.png" />
+    <div id="main_container_footer">
+        <div id="main_footer">
+            <div id="left_footer">
+                <div>
+                    <img src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg"
+                        alt="footer_logo img" />
                 </div>
-                <div><a href="">Find a KFC</a></div>
-            </div>
-
-            <div class="buttonLogos">
-                <div class="buttonLogo1">
-                    <img src="https://i.ibb.co/HhTsvz7/185-1855993-play-button-png-transparent.png" />
+                <div>
+                    <p>FoodMart Food</p>
+                    <p>Menu</p>
+                    <p>Order Lookup</p>
+                    <p>Gift Card</p>
+                    <p>Nutrition & Allergen</p>
                 </div>
-                <div class="buttonLogo2">
-                    <img src="https://i.ibb.co/MBbWX3j/5a902db97f96951c82922874.png" />
+                <div>
+                    <p>Support</p>
+                    <p>Get Help</p>
+                    <p>Contact Us</p>
+                    <p>FoodMart Feedback</p>
+                    <p>Privacy Policy</p>
+                </div>
+                <div>
+                    <p>Legel</p>
+                    <p>Terms and Conditions</p>
+                    <p>Privacy Policy</p>
+                    <p>Disclaimer</p>
+                    <p>Caultion Notice</p>
+                </div>
+                <div>
+                    <p>FoodMart India</p>
+                    <p>About FoodMart</p>
+                    <p>FoodMart Care</p>
+                    <p>Careers</p>
+                    <p>Our Golden Past</p>
+                </div>
+            </div>
+            <div id="right_footer">
+                <div>
+                    <a href="#"><span
+                            class="material-symbols-outlined">location_on</span>Find a
+                        FoodMart</a>
+                </div>
+                <div>
+                    <img src="https://images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg"
+                        alt="app store img" />
+                </div>
+                <div>
+                    <img src="https://images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg"
+                        alt="app store img" />
                 </div>
             </div>
         </div>
-
-
-        <div class="bottomMost">
-            <div class="copyright">
-                <p>Copyright © KFC Corporation 2021 All Rights Reserved</p>
+        <div id="icons_media">
+            <div id="span_paragraph">
+                <span>Copyright © FoodMart Corporation 2021 All Rights Reserved</span>
             </div>
-            <div class="socialMedia">
-                <ul>
-                    <li><img src="https://i.ibb.co/k4G3xQX/Social-Insta-White.png" /></li>
-                    <li><img src="https://i.ibb.co/DCbScVM/Social-Facebook-White.png" /></li>
-                    <li><img src="https://i.ibb.co/TY7zLqX/Social-Twitter-White.png" /></li>
-                </ul>
-            </div>
+          
         </div>
     </div>
-    </div>
+   
 </body>
 
 </html>

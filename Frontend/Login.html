@@ -16,7 +16,14 @@
         body {
             background-color: rgb(255, 255, 255);
         }
-
+  .loginBtn{
+    border: none;
+    width: 80px;
+    height: 50px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+  }
         #box1 {
             /* border: 1px  solid rgb(12, 196, 46); */
             height: auto;
@@ -263,13 +270,18 @@
 
 
         }
+        #header img{
+                width: 100px;
+                height: 100px;
+        }
     </style>
     <title>Document</title>
 </head>
 
 <body>
     <div id="header">
-        <h1>Kentucky Fried Chicken</h>
+     <img src="./assets/FoodMart.png" alt="">
+        
     </div>
     <div id="container">
 
@@ -292,7 +304,7 @@
             <br><br>
             <br><br>
  
-            <button onclick="onLogin()">Login</button>
+            <button class="loginBtn" onclick="onLogin()">Login</button>
             <br><br>
 
 
@@ -302,10 +314,6 @@
                     USe</u></label><br>
                     <br><br>
 
-            <input type="checkbox" id="termcondition2">
-
-
-            <label id="term2">Login for Email updates and Promotions</label>
             <br><br>
 
 
