@@ -815,7 +815,7 @@ a {
    
 let cartLS = JSON.parse(localStorage.getItem("cart-page")) || [];
 
-    fetch("http://localhost:4500/foods")
+    fetch("https://calm-gray-cockatoo-sock.cyclic.app/foods")
         .then(res => res.json())
         .then(res => productData(res))
         .catch(e => console.log(e))
